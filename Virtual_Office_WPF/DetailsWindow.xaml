@@ -81,11 +81,41 @@
             />
 
 
-        <TextBlock
+        <TextBox
             Grid.Row="2"
             Grid.Column="2"
             Height="25"
-            />
+            IsReadOnly="True"/>
+
+        <TextBox
+            Grid.Row="3"
+            Grid.Column="2"
+            Height="25"
+            IsReadOnly="True"/>
+
+        <TextBox
+            Grid.Row="4"
+            Grid.Column="2"
+            Height="25"
+            IsReadOnly="True"/>
+
+        <TextBox
+            Grid.Row="5"
+            Grid.Column="2"
+            Height="25"
+            IsReadOnly="True"/>
+
+        <TextBox
+            Grid.Row="6"
+            Grid.Column="2"
+            Height="25"
+            IsReadOnly="True"/>
+
+        <TextBox
+            Grid.Row="7"
+            Grid.Column="2"
+            Height="25"
+            IsReadOnly="True"/>
 
         <Button
             Content="Close"

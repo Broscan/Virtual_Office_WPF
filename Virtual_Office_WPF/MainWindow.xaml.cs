@@ -1,28 +1,54 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Controls;
-using System.Windows.Data;
-using System.Windows.Documents;
-using System.Windows.Input;
-using System.Windows.Media;
-using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
-using System.Windows.Shapes;
 
 namespace Virtual_Office_WPF
 {
-    /// <summary>
-    /// Interaction logic for MainWindow.xaml
-    /// </summary>
+
+    public class Manager
+    {
+        enum Department
+        {
+            Finances,
+            Administration,
+            Production,
+            Marketing
+        }
+
+        public void LoopEnum(ComboBox cbDepartment)
+        {
+            foreach (Enum @enum in Enum.GetValues(typeof(Department)))
+            {
+                cbDepartment.Items.Add(@enum);
+            }
+        }
+
+
+
+
+
+    }
     public partial class MainWindow : Window
     {
+
+
+
+
+
         public MainWindow()
         {
             InitializeComponent();
+
+            Manager manager = new();
+
+            manager.LoopEnum(cbDepartment);
+
+
         }
+
+
     }
+
+
+
 }
