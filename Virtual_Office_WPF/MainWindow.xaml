@@ -162,12 +162,12 @@
             Grid.Column="2"
             Grid.Row="8"
             Grid.ColumnSpan="2"
-            Margin="20 0 45 0"/>
+            Margin="20 0 45 0" Click="btn_Add"/>
 
         <Button
             Content="Show Details"
             Grid.Column="4"
-            Grid.Row="8"/>
+            Grid.Row="8" Click="btn_Edit"/>
 
         <Button
             Content="Delete"

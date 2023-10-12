@@ -1,27 +1,28 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows;
-using System.Windows.Controls;
-using System.Windows.Data;
-using System.Windows.Documents;
-using System.Windows.Input;
-using System.Windows.Media;
-using System.Windows.Media.Imaging;
-using System.Windows.Shapes;
+﻿using System.Windows;
 
 namespace Virtual_Office_WPF
 {
-    /// <summary>
-    /// Interaction logic for DetailsWindow.xaml
-    /// </summary>
+
     public partial class DetailsWindow : Window
     {
-        public DetailsWindow()
+        public DetailsWindow(Employee employee)
         {
             InitializeComponent();
+
+            txtFullName.Text = employee.FullName();
+            txtAge.Text = employee.Age.ToString();
+            txtSalary.Text = employee.Salary.ToString();
+            txtBiography.Text = employee.ShowBio();
+            txtDepartment.Text = employee.Department.ToString();
+        }
+
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+
+            MainWindow mainWindow = new();
+            mainWindow.Show();
+
+            Close();
         }
     }
 }

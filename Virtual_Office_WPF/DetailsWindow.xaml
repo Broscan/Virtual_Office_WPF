@@ -82,36 +82,42 @@
 
 
         <TextBox
+            Name="txtFullName"
             Grid.Row="2"
             Grid.Column="2"
             Height="25"
             IsReadOnly="True"/>
 
         <TextBox
+            Name="txtAge"
             Grid.Row="3"
             Grid.Column="2"
             Height="25"
             IsReadOnly="True"/>
 
         <TextBox
+            Name="txtSalary"
             Grid.Row="4"
             Grid.Column="2"
             Height="25"
             IsReadOnly="True"/>
 
         <TextBox
+            Name="txtBiography"
             Grid.Row="5"
             Grid.Column="2"
             Height="25"
             IsReadOnly="True"/>
 
         <TextBox
+            Name="txtDepartment"
             Grid.Row="6"
             Grid.Column="2"
             Height="25"
             IsReadOnly="True"/>
 
         <TextBox
+            Name="txtBirthday"
             Grid.Row="7"
             Grid.Column="2"
             Height="25"
@@ -121,7 +127,7 @@
             Content="Close"
             Grid.Column="3"
             Grid.Row="8"
-            Margin="40 10 40 10"/>
+            Margin="40 10 40 10" Click="Button_Click"/>
         
 
 

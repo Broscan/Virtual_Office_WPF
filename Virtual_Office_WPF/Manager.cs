@@ -4,7 +4,7 @@ using System.Windows.Controls;
 
 namespace Virtual_Office_WPF
 {
-    public class Manager : MainWindow
+    public class Manager
     {
         enum Department
         {
@@ -22,28 +22,29 @@ namespace Virtual_Office_WPF
             }
         }
 
-        public void SaveEmployee()
+        public ListBoxItem SaveEmployee(TextBox firstName, TextBox lastName, TextBox salary, TextBox age, TextBox bio, ComboBox department)
         {
-            string firstName = txtFirstName.Text;
-            string lastName = txtLastName.Text;
-            string age = txtAge.Text;
-            string salary = txtSalary.Text;
-            string biography = txtBiography.Text;
-            string department = cbDepartment.SelectedItem.ToString();
+            bool isAge = int.TryParse(age.Text, out int ageInt);
+            bool isSalary = int.TryParse(salary.Text, out int salaryInt);
 
-            if (firstName != null && lastName != null && age != null && salary != null && biography != null)
+
+            if (firstName != null && lastName != null && isAge == true && isSalary == true && bio != null)
             {
+                Employee newPerson = new(firstName.Text, lastName.Text, ageInt, salaryInt, bio.Text, department.Text);
+
                 ListBoxItem newEmployee = new();
 
 
+                newEmployee.Content = newPerson.FullName();
+                newEmployee.Tag = newPerson;
 
-
-
+                return newEmployee;
 
             }
             else
             {
                 MessageBox.Show("Must fill in all fields!");
+                return null;
             }
 
 
